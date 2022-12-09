@@ -5,6 +5,9 @@ Own build info
 mkdir buildQuaZip
 cd buildQuaZip
 
+set PATH=C:\Qt\5.15.11\msvc2019_64\bin;%PATH%
+call "C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\Tools\VsDevCmd.bat"
+
 cmake .\.. -G "Visual Studio 17 2022" -A x64 -DCMAKE_INSTALL_PREFIX=.\..\install2\ -D QUAZIP_QT_MAJOR_VERSION=5 -Wno-dev -D QUAZIP_USE_QT_ZLIB=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
 cmake --build . --target ALL_BUILD --config RelWithDebInfo
 cmake -DBUILD_TYPE=RelWithDebInfo -P cmake_install.cmake
