@@ -1,3 +1,16 @@
+=================================================================================================================================================
+Own build info
+
+
+mkdir buildQuaZip
+cd buildQuaZip
+
+cmake .\.. -G "Visual Studio 17 2022" -A x64 -DCMAKE_INSTALL_PREFIX=.\..\install2\ -D QUAZIP_QT_MAJOR_VERSION=5 -Wno-dev -D QUAZIP_USE_QT_ZLIB=ON -DCMAKE_BUILD_TYPE=RelWithDebInfo
+cmake --build . --target ALL_BUILD --config RelWithDebInfo
+cmake -DBUILD_TYPE=RelWithDebInfo -P cmake_install.cmake
+
+=================================================================================================================================================
+
 QuaZip is the C++ wrapper for Gilles Vollant's ZIP/UNZIP package
 (AKA Minizip) using Trolltech's Qt library.
 
